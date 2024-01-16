@@ -18,7 +18,7 @@ Trata-se de um projeto visando a criação de uma link tree. <br/>
 <br>
 
 <p align="center">
-  <img alt="projeto DevLinks" src=".github/preview.jpg" width="100%">
+  <img alt="projeto DevTree" src="./github/preview.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
