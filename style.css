@@ -21,7 +21,6 @@
   --surface-color-hover: rgba(0, 0, 0, 0.2);
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bg-url: url(./assets/assets/sun.svg);
-  transition: all 0.5;
 }
 body {
   /* forma detalhada, em suma é a mesma coisa.
@@ -83,13 +82,18 @@ existem duas maneiras de fazer isso, seja com o display block no Id ou criando u
   top: 50%;
   z-index: 1;
   transform: translateY(-50%);
+  animation: slide-out 0.4s;
 
   /* as propriedades position, left, top etc. servem para alinhar elementos na página no caso em questão foi usado para deixar o buttom centralizado com o tracker*/
 }
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards;
 }
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
+
 #switch span {
   display: block;
   width: 64px;
@@ -100,6 +104,7 @@ existem duas maneiras de fazer isso, seja com o display block no Id ou criando u
   -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
 }
+
 /* links */
 
 ul {
@@ -169,5 +174,23 @@ footer {
   }
   .light {
     --bg-url: url(./assets/assets/bg-desktop-light.jpg);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 60%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 60%;
+  }
+  to {
+    left: 0;
   }
 }
