@@ -19,6 +19,6 @@ if (document.body.classList.contains("light")) {
   img.setAttribute("src", "./assets/images/avatar.png")
 }
 
-// animação 
+// animação
 
 
