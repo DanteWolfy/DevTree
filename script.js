@@ -21,4 +21,16 @@ if (document.body.classList.contains("light")) {
 
 // animação
 
+var div = document.getElementById("log")
+var texto = "Olá meu nome é Carlos Victor, seja bem vindo!"
 
+function escrever(str, el) {
+  var char = str.split("").reverse()
+  var typer = setInterval(function () {
+    if (!char.length) return clearInterval(typer)
+    var next = char.pop()
+    el.innerHTML += next
+  }, 100)
+}
+
+escrever(texto, div);
