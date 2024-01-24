@@ -139,7 +139,6 @@ ul li a {
   transition: background 0.5s;
 }
 
-/* pseudo-selector serve para mudar propriedades ao colocar o mouse sobre o objeto */
 ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
